@@ -52,6 +52,8 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec konsole 
 
+# copyq
+bindsym $mod+v exec copyq floating enable
 # kill focused window
 bindsym $mod+Shift+q kill
 
