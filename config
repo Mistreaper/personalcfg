@@ -12,6 +12,11 @@
 set $mod Mod4
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
+# night color 
+exec_always --no-startup-id redshift -P -O 4000 
+
+
+
 # no border
 for_window [class="^.*"] border pixel 0
 # alttab
