@@ -4,7 +4,7 @@
 ## Use i3 with KDE, a match made in HEAVEN
 
 Thanks to https://github.com/heckelson/i3-and-kde-plasma, I am able to do this. You just need to do this 
-to create a plasma + i3 session.
+to create a plasma + i3 session. Obviously you need `i3-gaps` and `plasma`.
 
 Simply write the following to `/usr/share/xsessions/plasma-i3.desktop`:
 ```
@@ -30,13 +30,12 @@ put-in-.config = `~/.config`
 
 ## DEPENDENCIES:
 
-For i3: 
+For i3 config itself: 
 `polybar`, `feh`, `j4-dmenu-desktop`, `dolphin`, `picom`
 
-## NOTE(S):
+For i3 + plasma: `i3-gaps`, `plasma`
 
-For dmenu, I set the shortcut to `$mod+shift+d` instead of `$mod+d`. This is because use `$mod+d` for
-the KDE application launcher.
+## NOTE(S):
 
 I don't know why, but please backup your Opera cookies because somehow Opera
 clears cookies in vanilla i3wm. The cookies are stored at `~/.config/Opera/`, in a file

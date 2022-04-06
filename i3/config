@@ -17,7 +17,7 @@ exec --no-startup-id feh --bg-scale ~/Pictures/coolwallpaper.jpg
 exec_always --no-startup-id picom -bc
 
 #alt + tab
-bindsym $mod+Tab workspace back_and_forth
+bindsym Mod1+Tab workspace back_and_forth
 
 set $mod Mod4
 exec_always --no-startup-id polybar 
@@ -31,6 +31,12 @@ for_window [title="Desktop — Plasma"] kill; floating enable; border none
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
+# cool gaps
+gaps inner 10
+gaps outer 10
+
+# Activate smart gaps (always)
+smart_gaps on
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
@@ -71,7 +77,7 @@ bindsym $mod+e exec dolphin
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+shift+d exec --no-startup-id j4-dmenu-desktop
+bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
