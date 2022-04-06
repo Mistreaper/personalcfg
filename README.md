@@ -28,10 +28,12 @@ put-in-.config = `~/.config`
 
 .xprofile = put in `~`, this is to integrate KDE themes + settings with i3-wm
 
+
 ## DEPENDENCIES:
 
 For i3 config itself: 
-`polybar`, `feh`, `j4-dmenu-desktop`, `dolphin`, `picom`
+`polybar`, `feh`, `j4-dmenu-desktop`, `dolphin`, `picom`, `redshift` 
+
 
 For i3 + plasma: `i3-gaps`, `plasma`
 
