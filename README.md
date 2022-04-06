@@ -10,4 +10,17 @@ put-in-.config = `~/.config`
 ## DEPENDENCIES:
 
 For i3: 
-`polybar`, `feh`, `j4-dmenu-desktop`, `dolphin`
+`polybar`, `feh`, `j4-dmenu-desktop`, `dolphin`, `picom`
+
+## NOTE(S):
+I don't know why, but please backup your Opera cookies because somehow Opera
+clears cookies in i3wm. The cookies are stored at `~/.config/Opera/`, in a file
+called `Cookies`. Run:
+
+```
+cd ~/.config/Opera && cp Cookies ./Cookies.backup
+```
+To restore:
+```
+cd ~/.config/Opera && rm Cookies && cp Cookies.backup ./Cookies
+```

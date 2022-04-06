@@ -11,6 +11,7 @@
 
 
 # this is for wallpaper
+# Rename the path to something else if you want to use a different wallpaper
 exec --no-startup-id feh --bg-scale ~/Pictures/coolwallpaper.jpg
 
 # picom transparency
