@@ -109,25 +109,26 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "terminal.integrated.profiles.linux": {
         "bash": {
-            "path": "bash",
+            "path": "/usr/bin/bash",
             "icon": "terminal-bash"
         },
         "zsh": {
-            "path": "zsh"
+            "path": "/usr/bin/zsh"
         },
         "fish": {
             "path": "fish"
         },
         "tmux": {
-            "path": "tmux",
+            "path": "/usr/bin/tmux",
             "icon": "terminal-tmux"
         },
         "pwsh": {
-            "path": "pwsh",
+            "path": "/usr/bin/pwsh",
             "icon": "terminal-powershell"
         },
         "cmd": {
-            "path": "/usr/bin/cmd"
+            "path": "/usr/bin/cmd",
+            "icon": "terminal-powershell"
         }
     },
     "dotnetAcquisitionExtension.enableTelemetry": false,
