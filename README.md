@@ -32,10 +32,12 @@ put-in-.config = `~/.config`
 ## DEPENDENCIES:
 
 For i3 config itself: 
-`polybar`, `feh`, `j4-dmenu-desktop`, `dolphin`, `picom`, `redshift` 
+`polybar`, `feh`, `j4-dmenu-desktop`, `dolphin`, `picom`, `redshift`
 
 
 For i3 + plasma: `i3-gaps`, `plasma`
+
+
 
 ## i3-gaps basics
 
