@@ -25,17 +25,17 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
-alias sync="yay -Syyy"
-alias install="yay -S"
-alias update="yay -Syyu"
-alias search="yay -Ss"
-alias search-local="yay -Qs"
-alias pkg-info="yay -Qi"
-alias local-install="yay -U"
-alias clr-cache="yay -Scc"
-alias unlock="doas rm /var/lib/pacman/db.lck"
-alias remove="yay -R"
-alias autoremove="yay -Rns"
+alias sync="sudo pacman -Syyy"
+alias install="sudo pacman -S"
+alias update="sudo pacman -Syyu"
+alias search="sudo pacman -Ss"
+alias search-local="sudo pacman -Qs"
+alias pkg-info="sudo pacman -Qi"
+alias local-install="sudo pacman -U"
+alias clr-cache="sudo pacman -Scc"
+alias unlock="sudo rm /var/lib/pacman/db.lck"
+alias remove="sudo pacman -R"
+alias autoremove="sudo pacman -Rns"
 
 alias whereami="pwd"
 # ignore these stupid comments in my .zshrc
