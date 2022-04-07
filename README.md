@@ -51,7 +51,9 @@ Workspaces are the best way to manager windows. To open an application, you may 
 
 To exit your i3 session, just run $mod+shift+e. This will log you out. Another way to do it is to open the application launcher and log out. 
 
-There are many more, but you can google them yourself. Most of them are just how to position windows. To set a window 'floating', simply press $mod+shift+space. Press the same combination to toggle it back. Press $mod+leftclickdrag to move a window during floating mode.
+There are many more, but you can google them yourself. Most of them are just how to position windows. To set a window 'floating', simply press $mod+shift+space. Press the same combination to toggle it back. Press $mod+leftclickdrag to move a window during floating mode, and $mod+rightclickdrag to resize a window during floating mode.
+
+There's also a "resize mode" that you can toggle with $mod+r. Use your `j, k, l, ;` keys to resize windows and $mod+r to toggle it back to normal.
 
 You can switch workspaces with $mod+number, right? But, you can also put a window in a workspace. Press $mod+shift+numberofworkspace to move a window to that workspace.
 ## NOTE(S):
