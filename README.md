@@ -35,9 +35,24 @@ everything in folder home: `~/`
 For i3 config itself: 
 `polybar`, `feh`, `j4-dmenu-desktop`, `dolphin`, `picom`, `redshift`
 
-
 For i3 + plasma: `i3-gaps`, `plasma`
 
+For .zshrc: 
+
+```
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+For .p10k.zsh: install `nerd-fonts-droid-sans-mono` and run:
+
+```
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+```
+Set `DroidSansMono Nerd Font` as your terminal font. To set it in VSCode, go to settings > JSON > then append this
+
+```
+"terminal.integrated.fontFamily": "DroidSansMono Nerd Font",
+```
 
 
 ## i3-gaps basics
