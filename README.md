@@ -26,6 +26,7 @@ i3 (optimized when mixing i3 + KDE) = `~/.config/i3/` or `/etc/i3/config` for au
 
 put-in-.config = `~/.config`
 
+everything in folder home: `~/`
 .xprofile = put in `~`, this is to integrate KDE themes + settings with i3-wm
 
 
