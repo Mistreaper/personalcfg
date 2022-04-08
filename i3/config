@@ -20,7 +20,10 @@ exec_always --no-startup-id picom -bc
 exec_always --no-startup-id /bin/redshift -P -O 4000
 
 #alt + tab
-bindsym Mod1+Tab workspace back_and_forth
+set $i3t_alt_tab        /usr/bin/i3-alt-tab.py n
+set $i3t_alt_shift_tab  /usr/bin/i3-alt-tab.py p
+bindsym Mod1+Tab   exec $i3t_alt_tab
+bindsym Mod1+Shift+Tab  exec $i3t_alt_shift_tab
 
 set $mod Mod4
 exec_always --no-startup-id polybar 
