@@ -56,7 +56,14 @@ Set `DroidSansMono Nerd Font` as your terminal font. To set it in VSCode, go to 
 "terminal.integrated.fontFamily": "DroidSansMono Nerd Font",
 ```
 
+## NEW: Kwin-tiling-script
+Local installtion of Kwin tiling. 
+Source: https://github.com/lingtjien/Grid-Tiling-Kwin 
 
+```
+chmod +x kwin-tiling-script.sh
+./kwin-tiling-script.sh
+```
 ## i3-gaps basics
 
 First, let's learn about shortcuts. On the top left, you will see a number. That's called a workspace. To switch between workspaces, just 
