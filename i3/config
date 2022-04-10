@@ -21,7 +21,7 @@ exec_always --no-startup-id picom -bc
 exec_always --no-startup-id /bin/redshift -P -O 4000
 
 #alt + tab
-bindsym Mod1+tab focus right
+bindsym Mod1+Tab focus right
 
 exec_always --no-startup-id polybar 
 
