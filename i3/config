@@ -24,7 +24,7 @@ exec_always --no-startup-id /bin/redshift -P -O 4000
 bindsym Mod1+Tab focus right
 
 # Maximize floating window
-bindsym --release $mod+Up floating enable, resize set 1920 1080, move position 0 px 0 px 
+bindsym --release $mod+Up floating enable, resize set 1920 1060, move position 0 px 20 px 
 bindsym --release $mod+Down floating disable
 exec_always --no-startup-id polybar 
 
