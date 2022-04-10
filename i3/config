@@ -21,8 +21,7 @@ exec_always --no-startup-id picom -bc
 exec_always --no-startup-id /bin/redshift -P -O 4000
 
 #alt + tab
-# treat workspaces 1-10 as different displays
-exec_always workspace "9"; move workspace to output v9; workspace "10"; move workspace to output HDMI0; workspace "10"
+bindsym Mod1+tab focus right
 
 exec_always --no-startup-id polybar 
 
@@ -106,7 +105,6 @@ no_focus [class="plasmashell" window_type="notification"]
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys
 bindsym $mod+Left focus left

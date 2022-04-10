@@ -58,12 +58,6 @@ Set `DroidSansMono Nerd Font` as your terminal font. To set it in VSCode, go to 
 "terminal.integrated.fontFamily": "DroidSansMono Nerd Font",
 ```
 
-## NEW: i3-wm zoom/gmeet/discord streaming workspace FIX 
-
-https://www.reddit.com/r/i3wm/comments/n9u1ge/treat_a_workspace_as_a_seconddummy_monitor_to/
-
-Added a shell script to treat workspaces as virtual monitors so that I can screen share. Remember to 
-run `xrandr` and replace `HDMI0` on the last line with whatever monitor you're using.
 ## i3-gaps basics
 
 First, let's learn about shortcuts. On the top left, you will see a number. That's called a workspace. To switch between workspaces, just 
