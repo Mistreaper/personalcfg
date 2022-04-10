@@ -20,7 +20,9 @@ The rest is already covered in the i3 config, so no need to worry about that :).
 
 vscode = `~/.config/Code/User/`
 
-polybar = `/etc/polybar/` or `~/.config/polybar/`
+polybar = `/etc/polybar/` or `~/.config/polybar/`. Put the files other than `config.ini` into `/etc/polybar`.
+
+source for `kde-virtual-desktops-polybar`: https://github.com/KevinThomas0/kde-virtual-desktops-polybar 
 
 i3 (optimized when mixing i3 + KDE) = `~/.config/i3/` or `/etc/i3/config` for autoload
 

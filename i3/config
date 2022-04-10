@@ -5,6 +5,7 @@
 # this file and re-run i3-config-wizard(1).
 #
 
+set $mod Mod4
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
@@ -20,12 +21,9 @@ exec_always --no-startup-id picom -bc
 exec_always --no-startup-id /bin/redshift -P -O 4000
 
 #alt + tab
-set $i3t_alt_tab        /usr/bin/i3-alt-tab.py n
-set $i3t_alt_shift_tab  /usr/bin/i3-alt-tab.py p
-bindsym Mod1+Tab   exec $i3t_alt_tab
-bindsym Mod1+Shift+Tab  exec $i3t_alt_shift_tab
+# treat workspaces 1-10 as different displays
+exec_always workspace "9"; move workspace to output v9; workspace "10"; move workspace to output HDMI0; workspace "10"
 
-set $mod Mod4
 exec_always --no-startup-id polybar 
 
 # Font for window titles. Will also be used by the bar unless a different font

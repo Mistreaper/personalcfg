@@ -1,7 +1,13 @@
 #!/usr/bin/bash
 
 
-xrandr --newmode "ipad" 480.50  2736 2960 3256 3776  2048 2051 2061 2121 -hsync +vsync
-xrandr --addmode VIRTUAL1 ipad
-xrandr --output VIRTUAL1 --mode ipad --right-of HDMI0
-# Please run xrandr on terminal, replace HDMI0 with display you're using.
+xrandr --setmonitor v1 1920/508x1080/285+0+0 HDMI-0 
+xrandr --setmonitor v2 1920/508x1080/285+0+0 none 
+xrandr --setmonitor v3 1920/508x1080/285+0+0 none
+xrandr --setmonitor v3 1920/508x1080/285+0+0 none 
+xrandr --setmonitor v4 1920/508x1080/285+0+0 none 
+xrandr --setmonitor v5 1920/508x1080/285+0+0 none 
+xrandr --setmonitor v6 1920/508x1080/285+0+0 none 
+xrandr --setmonitor v7 1920/508x1080/285+0+0 none 
+xrandr --setmonitor v8 1920/508x1080/285+0+0 none
+xrandr --setmonitor v9 1920/508x1080/285+0+0 none
