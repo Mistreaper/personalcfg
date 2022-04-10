@@ -77,6 +77,12 @@ There are many more, but you can google them yourself. Most of them are just how
 There's also a "resize mode" that you can toggle with $mod+r. Use your `j, k, l, ;` keys to resize windows and $mod+r to toggle it back to normal.
 
 You can switch workspaces with $mod+number, right? But, you can also put a window in a workspace. Press $mod+shift+numberofworkspace to move a window to that workspace.
+
+## i3 extras 
+
+For me to stream on Discord, I have to put the program that I want to stream into the same workspace as Discord, right? But, I want the program to be fullscreen and Discord too. So, I created a shortcut (`$mod+Up`) that maximizes a floating window ('$mod+shift+space' to toggle floating). In that way, I can use my shortcut (`Mod1+tab` aka alt tab) to easily switch between floating windows.
+
+I usually put Discord and games on one workspace, and important stuffs on another workspace.
 ## NOTE(S):
 
 I don't know why, but please backup your Opera cookies because somehow Opera
