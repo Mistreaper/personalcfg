@@ -123,10 +123,6 @@
         "pwsh": {
             "path": "/usr/bin/pwsh",
             "icon": "terminal-powershell"
-        },
-        "cmd": {
-            "path": "/usr/bin/cmd",
-            "icon": "terminal-powershell"
         }
     },
     "dotnetAcquisitionExtension.enableTelemetry": false,
