@@ -67,7 +67,6 @@
     "svg.preview.mode": "svg",
     "sonarlint.pathToNodeExecutable": "C:\\\\Program Files\\\\nodejs\\\\node.exe",
     "redhat.telemetry.enabled": false,
-    "firefox.executable": "C:\\\\Program Files\\\\Mozilla Firefox\\\\firefox.exe",
     "vscode-edge-devtools.mirrorEdits": true,
     "vscode-edge-devtools.themes": "Dark",
     "vscode-edge-devtools.browserFlavor": "Stable",
@@ -102,7 +101,6 @@
     "hexeditor.defaultEndianness": "little",
     "hexeditor.inspectorType": "aside",
     "telemetry.telemetryLevel": "off",
-    "sonarlint.ls.javaHome": "/home/mistreaper/.vscode/extensions/sonarsource.sonarlint_managed-jre/jre/jdk-11.0.14.1+1-jre",
     "workbench.editorAssociations": {
         "*.docx": "default"
     },
