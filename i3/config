@@ -18,7 +18,7 @@ exec --no-startup-id feh --bg-scale ~/Pictures/coolwallpaper.jpg
 exec_always --no-startup-id picom -bc
 
 # night color. change 4000 to any value that you like. comment this line if you don't want night color.
-exec_always --no-startup-id /bin/redshift -P -O 4000
+exec --no-startup-id redshift -P -O 4000
 # There's also a redshift.conf file provided. Remember to move the folder, not the file, to ~/.config. 
 #alt + tab
 bindsym Mod1+Tab focus right
