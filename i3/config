@@ -26,7 +26,7 @@ bindsym Mod1+Tab focus right
 bindsym Mod1+Shift+Tab workspace next
 # use mod tab instead. make sure to disable meta+tab to switch activites shortcut in kde system settings > shortcuts> kwin
 bindsym $mod+Tab workspace next
-# Maximize floating window. Negate the 1080 value by your polybar height - 6. Also change 26px to polybar height + 6. 
+# Maximize floating window. Negate the 1080 (now it's 1054) value by your polybar height+border. Also change 26px to polybar height + border. 
 bindsym --release $mod+Up floating enable, resize set 1920 1054, move position 0 px 26 px 
 bindsym --release $mod+Down floating disable
 exec_always --no-startup-id polybar 
