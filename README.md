@@ -1,5 +1,6 @@
 # This is my personal config (dotfiles) github repo
 
+**Use a dark wallpaper, this is recommended because the color scheme is dark.**
 
 ## Use i3 with KDE, a match made in HEAVEN
 
@@ -29,6 +30,8 @@ i3 (optimized when mixing i3 + KDE) = `~/.config/i3/` or `/etc/i3/config` for au
 put-in-.config = `~/.config`
 
 i3-alt-tab.py = `/usr/bin`
+
+based-wallpapers = `~/Pictures/` or `/usr/share/wallpapers`
 
 everything in folder home: `~/`
 .xprofile = put in `~`, this is to integrate KDE themes + settings with i3-wm
