@@ -4,37 +4,42 @@
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
 #
-
 set $mod Mod4
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-
 # this is for wallpaper
-exec --no-startup-id feh --bg-scale ~/Pictures/coolwallpaper.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/Night.jpg
+
+# this is for Discord
+exec discord --start-minimized
 
 # picom transparency
 exec_always --no-startup-id picom -bc
 
 # night color. change 4000 to any value that you like. comment this line if you don't want night color.
-exec --no-startup-id redshift -P -O 4000
-# There's also a redshift.conf file provided. Remember to move the folder, not the file, to ~/.config. 
+exec_always --no-startup-id redshift -P -O 4000
+# Run redshift -P -O <value> to test night color
+
 #alt + tab
 bindsym Mod1+Tab focus right
-# alt + shift + tab for workspaces
 bindsym Mod1+Shift+Tab workspace next
-# use mod tab instead. make sure to disable meta+tab to switch activites shortcut in kde system settings > shortcuts> kwin
+
 bindsym $mod+Tab workspace next
-# Maximize floating window. Negate the 1080 (now it's 1054) value by your polybar height+border. Also change 26px to polybar height + border. 
-bindsym --release $mod+Up floating enable, resize set 1920 1053, move position 0 px 27 px 
+# maximize floating window
+bindsym --release $mod+Up floating enable, resize set 1920 1053, move position 0 px 27 px
+bindsym --release $mod+Shift+Up floating enable, resize set 1920 1080, move position 0 px 0 px
 bindsym --release $mod+Down floating disable
+#bindsym $mod+Up focus up
+
 exec_always --no-startup-id polybar 
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 8
 for_window [class="^.*"] border pixel 0
+
 for_window [title="Desktop — Plasma"] kill; floating enable; border none
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -81,14 +86,15 @@ floating_modifier $mod
 bindsym $mod+Return exec konsole 
 
 # dolphin
-bindsym $mod+e exec dolphin
+bindsym $mod+e exec dolphin 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
+bindsym $mod+d exec --no-startup-id j4-dmenu-desktop 
+#bindsym $mod+d exec rofi -show drun -show-icons 
 # A more modern dmenu replacement is rofi:
-# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
+bindsym $mod+q exec sleep 0.1 && rofi -show drun -show-icons 
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
@@ -97,6 +103,7 @@ bindsym $mod+d exec --no-startup-id j4-dmenu-desktop
 for_window [title="Desktop — Plasma"] kill, floating enable, border none
 for_window [class="plasmashell"] floating enable
 for_window [class="Plasma"] floating enable, border none
+for_window [class="copyq"] floating enable
 for_window [title="plasma-desktop"] floating enable, border none
 for_window [title="win7"] floating enable, border none
 for_window [class="krunner"] floating enable, border none
@@ -111,11 +118,11 @@ no_focus [class="plasmashell" window_type="notification"]
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
+#bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
-#bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
@@ -236,7 +243,6 @@ for_window [class="systemsettings"] floating enable
 for_window [class="plasmashell"] floating enable;
 for_window [class="Plasma"] floating enable; border none
 for_window [title="plasma-desktop"] floating enable; border none
-for_window [class="copyq"] floating enable; border none
 for_window [title="win7"] floating enable; border none
 for_window [class="krunner"] floating enable; border none
 for_window [class="Kmix"] floating enable; border none
