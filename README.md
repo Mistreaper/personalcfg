@@ -1,6 +1,5 @@
 # This is my personal config (dotfiles) github repo
 
-**Use a dark wallpaper, this is recommended because the color scheme is dark.**
 
 ## Use i3 with KDE, a match made in HEAVEN
 
@@ -36,7 +35,9 @@ based-wallpapers = `~/Pictures/` or `/usr/share/wallpapers`
 everything in folder home: `~/`
 .xprofile = put in `~`, this is to integrate KDE themes + settings with i3-wm
 
+colorkde  = put file(s) in `~/.kde4/share/apps/color-schemes/`
 
+kvantum = put folder in `~/.config/kvantum/`
 ## DEPENDENCIES:
 
 For i3 config itself: 
