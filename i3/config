@@ -18,6 +18,8 @@ exec --no-startup-id discord --start-minimized
 # picom transparency
 exec_always --no-startup-id picom -bc
 
+# start a terminal
+bindsym $mod+Return exec --no-startup-id alacritty 
 # night color. change 4000 to any value that you like. comment this line if you don't want night color.
 exec_always --no-startup-id redshift -P -O 4000
 # Run redshift -P -O <value> to test night color
@@ -82,8 +84,6 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec --no-startup-id alacritty 
 
 # dolphin
 bindsym $mod+e exec --no-startup-id dolphin 
