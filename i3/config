@@ -55,9 +55,9 @@ gaps outer 10
 smart_gaps on
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 # comment line above and uncomment line below if you use plasma + i3. this is for plasma shutdown screen instead of i3's nagbar
-#bindsym $mod+Shift+e exec --no-startup-id qdbus-qt5 org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
+bindsym $mod+Shift+e exec --no-startup-id qdbus-qt5 org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -91,7 +91,7 @@ bindsym $mod+e exec --no-startup-id dolphin
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id j4-dmenu-desktop 
+bindsym $mod+Shift+d exec --no-startup-id j4-dmenu-desktop 
 #bindsym $mod+d exec rofi -show drun -show-icons 
 # A more modern dmenu replacement is rofi:
 bindsym $mod+q exec --no-startup-id sleep 0.1 && rofi -show drun -show-icons 
