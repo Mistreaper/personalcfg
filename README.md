@@ -40,7 +40,7 @@ everything in folder home: `~/`
 ## DEPENDENCIES:
 
 For i3 config itself: 
-`polybar`, `feh`, `j4-dmenu-desktop`, `dolphin`, `picom`, `redshift`
+`polybar`, `feh`, `j4-dmenu-desktop`, `dolphin`, `picom`, `redshift`, `alacritty`
 
 For i3 + plasma: `i3-gaps`, `plasma`
 
