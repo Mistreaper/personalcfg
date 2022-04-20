@@ -13,7 +13,7 @@ set $mod Mod4
 exec --no-startup-id feh --bg-scale ~/Pictures/Night.jpg
 
 # this is for Discord
-exec discord --start-minimized
+exec --no-startup-id discord --start-minimized
 
 # picom transparency
 exec_always --no-startup-id picom -bc
