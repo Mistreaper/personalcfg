@@ -41,7 +41,7 @@ kvantum = put folder in `~/.config/kvantum/`
 ## DEPENDENCIES:
 
 For i3 config itself: 
-`polybar`, `feh`, `j4-dmenu-desktop`, `dolphin`, `picom`, `redshift`, `alacritty`
+`polybar`, `feh`, `j4-dmenu-desktop`, `dolphin`, `picom`, `redshift`, `konsole` (or `alacritty`)
 
 For i3 + plasma: `i3-gaps`, `plasma`
 
