@@ -875,3 +875,10 @@ colors:
 
   # Print all received window events.
   #print_events: false
+
+
+shell:
+ program: /bin/zsh
+ args:
+ - --login
+
