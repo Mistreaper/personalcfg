@@ -38,6 +38,8 @@ everything in folder home: `~/`
 colorkde  = put file(s) in `~/.kde4/share/apps/color-schemes/`
 
 kvantum = put folder in `~/.config/kvantum/`
+
+picom = put `picom.conf` into `~/.config/picom/` (user) or `/etc/xdg/` (system)
 ## DEPENDENCIES:
 
 For i3 config itself: 
