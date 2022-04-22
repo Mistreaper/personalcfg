@@ -43,7 +43,7 @@ picom = put `picom.conf` into `~/.config/picom/` (user) or `/etc/xdg/` (system)
 ## DEPENDENCIES:
 
 For i3 config itself: 
-`polybar`, `feh`, `j4-dmenu-desktop`, `dolphin`, `picom`, `redshift`, `konsole` (or `alacritty`)
+`polybar`, `feh`, `j4-dmenu-desktop`, `dolphin`, `picom`, `redshift`, `konsole` (or `alacritty`), `wmctrl`
 
 For i3 + plasma: `i3-gaps`, `plasma`
 
