@@ -51,7 +51,7 @@ yay -S --needed polybar feh j4-dmenu-desktop dolphin picom redshift konsole pip 
 ```
 
 For i3 config itself: 
-`polybar`, `feh`, `j4-dmenu-desktop`, `dolphin`, `picom`, `redshift`, `konsole` (or `alacritty`)
+`polybar`, `feh`, `j4-dmenu-desktop`, `dolphin`, `picom`, `redshift`, `konsole` (or `alacritty`), `wmctrl`
 
 You also need this for i3 master stack layout:
 
