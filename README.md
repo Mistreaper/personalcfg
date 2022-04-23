@@ -26,6 +26,8 @@ source for `kde-virtual-desktops-polybar`: https://github.com/KevinThomas0/kde-v
 
 i3 (optimized when mixing i3 + KDE) = `~/.config/i3/` or `/etc/i3/config` for autoload
 
+i3-master-layout = `/etc/i3/`
+
 put-in-.config = `~/.config`
 
 i3-alt-tab.py = `/usr/bin`
@@ -42,8 +44,20 @@ kvantum = put folder in `~/.config/kvantum/`
 picom = put `picom.conf` into `~/.config/picom/` (user) or `/etc/xdg/` (system)
 ## DEPENDENCIES:
 
+One liner to install all dependencies with `yay` (Arch based distros)):
+
+```
+yay -S --needed polybar feh j4-dmenu-desktop dolphin picom redshift konsole pip i3-gaps plasma; pip3 install ipc
+```
+
 For i3 config itself: 
 `polybar`, `feh`, `j4-dmenu-desktop`, `dolphin`, `picom`, `redshift`, `konsole` (or `alacritty`)
+
+You also need this for i3 master stack layout:
+
+```
+pip install ipc
+```
 
 For i3 + plasma: `i3-gaps`, `plasma`
 
