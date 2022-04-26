@@ -104,6 +104,8 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id j4-dmenu-desktop 
+# uncomment line below to use krunner (Plasma app launcher)
+#bindsym $mod+d exec --no-startup-id krunner
 #bindsym $mod+d exec rofi -show drun -show-icons 
 # A more modern dmenu replacement is rofi:
 bindsym $mod+q exec --no-startup-id sleep 0.1 && rofi -show drun -show-icons 
