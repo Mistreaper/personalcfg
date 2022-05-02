@@ -9,6 +9,9 @@ set $mod Mod4
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+# this is for plasmashell
+exec --no-startup-id kstart5 plasmashell
+
 # this is for wallpaper
 exec --no-startup-id feh --bg-scale ~/Pictures/Night.jpg
 
