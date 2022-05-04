@@ -9,10 +9,12 @@ set $mod Mod4
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 # picom transparency
-exec_always --no-startup-id picom -bc --experimental-backends
-# this is for wallpaper
-exec --no-startup-id feh --bg-scale ~/Pictures/Night.jpg
 
+# -------------------------------------------------------------
+# Startup Applications
+# -------------------------------------------------------------
+
+exec_always --no-startup-id picom -bc --experimental-backends
 # this is for plasmashell
 exec --no-startup-id kstart5 plasmashell 
 # this is for ksmserver
@@ -20,37 +22,104 @@ exec --no-startup-id kstart5 ksmserver
 # this is for Discord
 exec --no-startup-id discord --start-minimized
 
-bindsym $mod+shift+m exec --no-startup-id /etc/i3/i3-master-layout/i3-swap-master.py
+# polybar
+exec_always --no-startup-id polybar 
 
-exec_always --no-startup-id /etc/i3/i3-master-layout/i3-master-layout.py
-#exec --no-startup-id  /etc/i3-master-stack/i3_master
-#exec --no-startup-id i3-msg nop master toggle
+# -------------------------------------------------------------
+# Wallpaper
+# -------------------------------------------------------------
+exec --no-startup-id feh --bg-scale ~/Pictures/Night.jpg
 
-# swap to master node
-#bindsym $mod+m nop swap master 
- # go to master node
-#bindsym $mod+shift+m nop go master 
- # enable/disable master layout in current workspace
-#bindsym $mod+alt+m nop master toggle
+# -------------------------------------------------------------
+# Shortcuts
+# -------------------------------------------------------------
 
 # start a terminal
 bindsym $mod+Return exec --no-startup-id konsole 
-# night color. change 4000 to any value that you like. comment this line if you don't want night color.
-exec_always --no-startup-id redshift -P -O 4000
-# Run redshift -P -O <value> to test night color
+
+bindsym $mod+shift+m exec --no-startup-id /etc/i3/i3-master-layout/i3-swap-master.py
 
 #alt + tab
 bindsym Mod1+Tab focus right
 bindsym Mod1+Shift+Tab workspace next
 
+# Next workspace
 bindsym $mod+Tab workspace next
+
 # maximize floating window
 bindsym --release $mod+Up floating enable, resize set 1920 1053, move position 0 px 27 px
 bindsym --release $mod+Shift+Up floating enable, resize set 1920 1080, move position 0 px 0 px
 bindsym --release $mod+Down floating disable
-#bindsym $mod+Up focus up
 
-exec_always --no-startup-id polybar 
+# dolphin
+bindsym $mod+e exec --no-startup-id dolphin 
+
+# -------------------------------------------------------------
+# i3 master stack
+# -------------------------------------------------------------
+exec_always --no-startup-id /etc/i3/i3-master-layout/i3-master-layout.py
+#exec --no-startup-id  /etc/i3-master-stack/i3_master
+#exec --no-startup-id i3-msg nop master toggle
+# swap to master node
+#bindsym $mod+m nop swap master 
+# go to master node
+#bindsym $mod+shift+m nop go master 
+# enable/disable master layout in current workspace
+#bindsym $mod+alt+m nop master toggle
+
+# -------------------------------------------------------------
+# Night Color
+# -------------------------------------------------------------
+# night color. change 4000 to any value that you like. comment this line if you don't want night color.
+exec_always --no-startup-id redshift -P -O 4000
+# Run redshift -P -O <value> to test night color
+
+
+# -------------------------------------------------------------
+# i3+plasma audio
+# -------------------------------------------------------------
+
+# Use pactl to adjust volume in PulseAudio.
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# -------------------------------------------------------------
+# config for i3+plasma
+# -------------------------------------------------------------
+exec --no-startup-id wmctrl -c Plasma
+
+for_window [title="Desktop — Plasma"] kill, floating enable, border none
+for_window [class="plasmashell"] floating enable
+for_window [class="Plasma"] floating enable, border none
+for_window [class="copyq"] floating enable
+for_window [title="plasma-desktop"] floating enable, border none
+for_window [title="win7"] floating enable, border none
+for_window [class="krunner"] floating enable, border none
+for_window [class="Kmix"] floating enable, border none
+for_window [class="Klipper"] floating enable, border none
+for_window [class="Plasmoidviewer"] floating enable, border none
+for_window [class="(?i)*nextcloud*"] floating disable
+for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px
+no_focus [class="plasmashell" window_type="notification"] 
+
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# comment line above and uncomment line below if you use plasma + i3. this is for plasma shutdown screen instead of i3's nagbar
+#bindsym $mod+Shift+e exec --no-startup-id qdbus-qt5 org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
+
+# -------------------------------------------------------------
+# Gaps
+# -------------------------------------------------------------
+
+# cool gaps
+gaps inner 10
+gaps outer 10
+
+# Activate smart gaps (always)
+smart_gaps on
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -62,18 +131,9 @@ for_window [title="Desktop — Plasma"] kill; floating enable; border none
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
-# cool gaps
-gaps inner 10
-gaps outer 10
-
-# Activate smart gaps (always)
-smart_gaps on
 
 
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-# comment line above and uncomment line below if you use plasma + i3. this is for plasma shutdown screen instead of i3's nagbar
-#bindsym $mod+Shift+e exec --no-startup-id qdbus-qt5 org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
+
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
@@ -90,19 +150,11 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 
-# dolphin
-bindsym $mod+e exec --no-startup-id dolphin 
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -117,22 +169,6 @@ bindsym $mod+q exec --no-startup-id sleep 0.1 && rofi -show drun -show-icons
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
-# config for i3+plasma
-exec --no-startup-id wmctrl -c Plasma
-
-for_window [title="Desktop — Plasma"] kill, floating enable, border none
-for_window [class="plasmashell"] floating enable
-for_window [class="Plasma"] floating enable, border none
-for_window [class="copyq"] floating enable
-for_window [title="plasma-desktop"] floating enable, border none
-for_window [title="win7"] floating enable, border none
-for_window [class="krunner"] floating enable, border none
-for_window [class="Kmix"] floating enable, border none
-for_window [class="Klipper"] floating enable, border none
-for_window [class="Plasmoidviewer"] floating enable, border none
-for_window [class="(?i)*nextcloud*"] floating disable
-for_window [class="plasmashell" window_type="notification"] floating enable, border none, move right 700px, move down 450px
-no_focus [class="plasmashell" window_type="notification"] 
 
 # change focus
 bindsym $mod+j focus left
