@@ -124,6 +124,16 @@ Source: https://github.com/khanhas/Polybar
 
 If you want my configuration, you need to copy over the `Skins` folder to `C:/Users/USER/Documents/Rainmeter/`. Otherwise, install the `.rmskin` provided in the Releases page of Khanhas' GitHub repo.
 
-But first, open settings > taskbar settings, and put taskbar to stay topmost on the screen. You may choose to have smaller taskbar buttons if you want polybar to be shorter. Then, right click polybar > edit style, and change height to 30 (or whatever you like). This will hide the taskbar and still lets you do functionalities like opening the start menu.
 
-If you prefer to use large taskbar buttons, then the height would be 40. 
+**Section: IMPORTANT**
+
+Open up your `rainmeter.ini` file in `%appdata%/Rainmeter/` and add the following:
+
+```
+[Rainmeter]
+DesktopWorkAreaType=1
+DesktopWorkArea=0,20,0,0
+```
+`20` may be changed to the HEIGHT of your polybar.
+
+Then, restart Rainmeter.
