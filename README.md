@@ -1,6 +1,28 @@
 # This is my personal config (dotfiles) github repo
 
 
+## NEW: Polybar on WINDOWS
+
+Source: https://github.com/khanhas/Polybar
+
+If you want my configuration, you need to copy over the `Skins` folder to `C:/Users/USER/Documents/Rainmeter/`. Otherwise, install the `.rmskin` provided in the Releases page of Khanhas' GitHub repo.
+
+
+**Section: IMPORTANT**
+
+Open up your `rainmeter.ini` file in `%appdata%/Rainmeter/` and add the following in the `[Rainmeter]` section (just below the other lines):
+
+```
+DesktopWorkAreaType=1
+DesktopWorkArea=0,20,0,0
+```
+`20` may be changed to the HEIGHT of your polybar.
+
+It should look like this:
+
+![](https://cdn.discordapp.com/attachments/148718731743199233/977361631854100491/unknown.png)
+
+Then, restart Rainmeter.
 ## Use i3 with KDE, a match made in HEAVEN
 
 Thanks to https://github.com/heckelson/i3-and-kde-plasma, I am able to do this. You just need to do this 
@@ -117,23 +139,3 @@ To restore:
 ```
 cd ~/.config/Opera && rm Cookies && cp Cookies.backup ./Cookies
 ```
-
-## NEW: Polybar on WINDOWS
-
-Source: https://github.com/khanhas/Polybar
-
-If you want my configuration, you need to copy over the `Skins` folder to `C:/Users/USER/Documents/Rainmeter/`. Otherwise, install the `.rmskin` provided in the Releases page of Khanhas' GitHub repo.
-
-
-**Section: IMPORTANT**
-
-Open up your `rainmeter.ini` file in `%appdata%/Rainmeter/` and add the following:
-
-```
-[Rainmeter]
-DesktopWorkAreaType=1
-DesktopWorkArea=0,20,0,0
-```
-`20` may be changed to the HEIGHT of your polybar.
-
-Then, restart Rainmeter.
