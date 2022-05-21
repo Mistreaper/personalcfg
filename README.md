@@ -10,19 +10,13 @@ If you want my configuration, you need to copy over the `Skins` folder to `C:/Us
 
 **Section: IMPORTANT**
 
-Open up your `rainmeter.ini` file in `%appdata%/Rainmeter/` and add the following in the `[Rainmeter]` section (just below the other lines):
+Go over here: https://download.cnet.com/DesktopCoral/3001-2072_4-10433614.html 
+and download DesktopCoral. Run the setup.
 
-```
-DesktopWorkAreaType=1
-DesktopWorkArea=0,20,0,0
-```
-`20` may be changed to the HEIGHT of your polybar.
+Then, open up DesktopCoral, drag it to the top of the screen. You should see a white spot. Right click on it > Options, and set the **height** to the height of your Polybar module. 
 
-It should look like this:
+To make it run on startup, go to options, and there should be a checkbox "Start with Windows". Check it, click apply, and close.  
 
-![](https://cdn.discordapp.com/attachments/148718731743199233/977361631854100491/unknown.png)
-
-Then, restart Rainmeter.
 ## Use i3 with KDE, a match made in HEAVEN
 
 Thanks to https://github.com/heckelson/i3-and-kde-plasma, I am able to do this. You just need to do this 
