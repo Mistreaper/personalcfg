@@ -34,7 +34,11 @@ Comment=Plasma with i3
 The rest is already covered in the i3 config, so no need to worry about that :).
 ## PATHS:
 
+<<<<<<< HEAD
 nvim = `~/.config/`
+=======
+vscode = `~/.config/Code/User/`
+>>>>>>> f785345b6bf27406ea4790f0f4810ded4443fbb5
 
 polybar = `/etc/polybar/` or `~/.config/polybar/`. Put the scripts folder under `/etc/polybar`.  
 
